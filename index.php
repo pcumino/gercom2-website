@@ -1,5 +1,5 @@
 <?php 
-
+	$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,5 +19,11 @@
 </head>
 <body>
 	<h1 class="text-center well"><b>GERCOM2 - UFPA</b></h1>
+	<p>
+	<?php 
+		echo $actual_link;
+	?>
+		<a href=""></a>
+	</p>
 </body>
 </html>
