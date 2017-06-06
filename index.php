@@ -32,7 +32,7 @@ $ftplink = "ftp://$_SERVER[HTTP_HOST]";
 </body>
 <script type="text/javascript">
 	$(document).ready(function (){
-		$.ajax({url: <?php echo $node_link?>,
+		$.ajax({url: "<?php echo $node_link?>",
 			success: function(result){
 				$("#div1").html(result);
 			},
