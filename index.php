@@ -42,7 +42,12 @@ $ftplink = "ftp://$_SERVER[HTTP_HOST]";
 				$("#div1").html(result);
 			},
 			error: function(xhr, status, error){
-				$("#nodeAppLink").hide();
+				$("#nodeAppLink").prop({
+					disabled: true
+				});
+				$("#nodeAppLink a").prop({
+					disabled: true
+				});
 			}
 		});
 	});
