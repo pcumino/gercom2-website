@@ -1,7 +1,7 @@
 <?php 
-	$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
-	$node_link = $actual_link.":3000";
-	$ftplink = "ftp://$_SERVER[HTTP_HOST]";
+$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
+$node_link = $actual_link.":3000";
+$ftplink = "ftp://$_SERVER[HTTP_HOST]";
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,20 +22,24 @@
 <body>
 	<h1 class="text-center well"><b>GERCOM2 - UFPA</b></h1>
 	<p>
-	<div class="row text-center">
-		<div class="col-sm-3 col-lg-3"></div>
-		<div class="col-sm-3 col-lg-3"><a href="<?php echo $actual_link.':3000'?>">Visit our Node JS app</a></div>
-		<div class="col-sm-3 col-lg-3"><a href="<?php echo $ftplink?>">Visit our FTP page</a></div>
-		<div class="col-sm-3 col-lg-3"></div>
-	</div>
+		<div class="row text-center">
+			<div class="col-sm-3 col-lg-3"></div>
+			<div class="col-sm-3 col-lg-3"><a href="<?php echo $actual_link.':3000'?>">Visit our Node JS app</a></div>
+			<div class="col-sm-3 col-lg-3"><a href="<?php echo $ftplink?>">Visit our FTP page</a></div>
+			<div class="col-sm-3 col-lg-3"></div>
+		</div>
 	</p>
 </body>
 <script type="text/javascript">
-$(document).ready(function (){
-	$.get( "<?php echo $node_link?>", function( data ) {
-	  alert( "Data Loaded: " + data );
+	$(document).ready(function (){
+		$.ajax({url: <?php echo $node_link?>,
+			success: function(result){
+				$("#div1").html(result);
+			},
+			error: function(xhr, status, error){
+				alert(status);
+			}
+		});
 	});
-	$.get();
-});
 </script>
 </html>
