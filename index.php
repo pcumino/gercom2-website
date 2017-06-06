@@ -21,7 +21,7 @@
 <body>
 	<h1 class="text-center well"><b>GERCOM2 - UFPA</b></h1>
 	<p>
-		<a href="<?php echo $actual_link;?>">Visit our Node JS app</a>
+		<a href="<?php echo $actual_link.':3000'?>">Visit our Node JS app</a>
 	</p>
 </body>
 </html>
