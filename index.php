@@ -18,6 +18,11 @@ $ftplink = "ftp://$_SERVER[HTTP_HOST]";
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<style type="text/css">
+		a{
+			color: white;
+		}
+	</style>
 </head>
 <body>
 	<h1 class="text-center well"><b>GERCOM2 - UFPA</b></h1>
@@ -25,7 +30,7 @@ $ftplink = "ftp://$_SERVER[HTTP_HOST]";
 		<div class="row text-center">
 			<div class="col-sm-3 col-lg-3"></div>
 			<div class="col-sm-3 col-lg-3"><div class="btn btn-primary"><a href="<?php echo $actual_link.':3000'?>">Visit our Node JS app</a></div></div>
-			<div class="col-sm-3 col-lg-3"><div class="btn btn-primary"><a href="<?php echo $ftplink?>">Visit our FTP page</a></div></div>
+			<div class="col-sm-3 col-lg-3"><div class="btn btn-primary" disabled><a href="<?php echo $ftplink?>">Visit our FTP page</a></div></div>
 			<div class="col-sm-3 col-lg-3"></div>
 		</div>
 	</p>
