@@ -1,5 +1,6 @@
 <?php 
 	$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]:3000";
+	echo $actual_link;
 ?>
 <!DOCTYPE html>
 <html>
