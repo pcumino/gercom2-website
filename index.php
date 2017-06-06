@@ -22,8 +22,10 @@
 <body>
 	<h1 class="text-center well"><b>GERCOM2 - UFPA</b></h1>
 	<p>
-		<a href="<?php echo $actual_link.':3000'?>">Visit our Node JS app</a>
-		<a href="<?php echo $ftplink?>">Visit our FTP page</a>
+	<div class="row text-center">
+		<div class="col-sm-6 col-lg-6"><a href="<?php echo $actual_link.':3000'?>">Visit our Node JS app</a></div>
+		<div class="col-sm-6 col-lg-6"><a href="<?php echo $ftplink?>">Visit our FTP page</a></div>
+	</div>
 	</p>
 </body>
 </html>
