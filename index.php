@@ -29,8 +29,8 @@ $ftplink = "ftp://$_SERVER[HTTP_HOST]";
 	<p>
 		<div class="row text-center">
 			<div class="col-sm-3 col-lg-3"></div>
-			<div class="col-sm-3 col-lg-3"><div class="btn btn-primary"><a href="<?php echo $actual_link.':3000'?>">Visit our Node JS app</a></div></div>
-			<div class="col-sm-3 col-lg-3"><div class="btn btn-primary" disabled><a disabled href="<?php echo $ftplink?>">Visit our FTP page</a></div></div>
+			<div class="col-sm-3 col-lg-3"><div id="nodeAppLink" class="btn btn-primary"><a href="<?php echo $actual_link.':3000'?>">Visit our Node JS app</a></div></div>
+			<div class="col-sm-3 col-lg-3"><div class="btn btn-primary"><a href="<?php echo $ftplink?>">Visit our FTP page</a></div></div>
 			<div class="col-sm-3 col-lg-3"></div>
 		</div>
 	</p>
@@ -42,7 +42,7 @@ $ftplink = "ftp://$_SERVER[HTTP_HOST]";
 				$("#div1").html(result);
 			},
 			error: function(xhr, status, error){
-				alert(status);
+				$("#nodeAppLink").hide();
 			}
 		});
 	});
