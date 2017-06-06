@@ -30,4 +30,9 @@
 	</div>
 	</p>
 </body>
+<script type="text/javascript">
+	$(document).ready(function (){
+		alert();
+	});
+</script>
 </html>
