@@ -1,6 +1,6 @@
 <?php 
 	$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
-	// echo $actual_link.":3000";
+	$node_link = $actual_link.":3000";
 	$ftplink = "ftp://$_SERVER[HTTP_HOST]";
 ?>
 <!DOCTYPE html>
@@ -31,8 +31,11 @@
 	</p>
 </body>
 <script type="text/javascript">
-	$(document).ready(function (){
-		alert();
+$(document).ready(function (){
+	$.get( "<?php echo $node_link?>", function( data ) {
+	  alert( "Data Loaded: " + data );
 	});
+	$.get();
+});
 </script>
 </html>
