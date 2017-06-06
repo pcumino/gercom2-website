@@ -1,6 +1,7 @@
 <?php 
 	$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
-	echo $actual_link.":3000";
+	// echo $actual_link.":3000";
+	$ftplink = "ftp://$_SERVER[HTTP_HOST]";
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,6 +23,7 @@
 	<h1 class="text-center well"><b>GERCOM2 - UFPA</b></h1>
 	<p>
 		<a href="<?php echo $actual_link.':3000'?>">Visit our Node JS app</a>
+		<a href="<?php echo $ftplink?>">Visit our FTP page</a>
 	</p>
 </body>
 </html>
