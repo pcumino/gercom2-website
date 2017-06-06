@@ -49,7 +49,7 @@ $ftplink = "ftp://$_SERVER[HTTP_HOST]";
 				});
 				var label = $("<label>");
 				label.html('Server is not active');
-				$("#nodeAppLink").append(label);
+				$("#nodeAppLink").parent().append(label);
 
 			}
 		});
