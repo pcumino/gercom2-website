@@ -44,6 +44,9 @@ $ftplink = "ftp://$_SERVER[HTTP_HOST]";
 			error: function(xhr, status, error){
 				$("#nodeAppLink").attr('disabled','disabled');
 				$("#nodeAppLink a").attr('disabled','disabled');
+				$("#nodeAppLink a").click(function(evt){
+					evt.preventDefault();
+				});
 			}
 		});
 	});
